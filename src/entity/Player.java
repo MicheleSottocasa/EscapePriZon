@@ -147,15 +147,22 @@ public class Player extends Entity {
         if (index != 999) {
             String objetName = gp.obj[index].name;
             switch (objetName) {
-                case "redKey" -> getKey(0, "Red Key!", index, Color.red);
-                case "GreenKey" -> getKey(1, "Green Key!", index, Color.green);
-                case "PurpleKey" -> getKey(2, "Purple Key!", index, Color.magenta);
-                case "WhiteKey" -> getKey(3, "Wite Key!", index, Color.white);
-                case "boostspeed" -> {
+                case "redKey":
+                    getKey(0, "Red Key!", index, Color.red);
+                    break;
+                case "GreenKey":
+                    getKey(1, "Green Key!", index, Color.green);
+                    break;
+                case "PurpleKey":
+                    getKey(2, "Purple Key!", index, Color.magenta);
+                case "WhiteKey":
+                    getKey(3, "Wite Key!", index, Color.white);
+                    break;
+                case "boostspeed":
                     speed += 2;
                     gp.obj[index] = null;
                     gp.ui.showMessage("Speed Boosted!", Color.orange);
-                }
+                break;
             }
         }
     }
@@ -189,30 +196,30 @@ public class Player extends Entity {
         BufferedImage image = null;
 
         switch (direction) {
-            case "up" -> {
+            case "up":
                 if (spriteNum == 1)
                     image = up1;
                 if (spriteNum == 2)
                     image = up2;
-            }
-            case "down" -> {
+            break;
+            case "down":
                 if (spriteNum == 1)
                     image = down1;
                 if (spriteNum == 2)
                     image = down2;
-            }
-            case "left" -> {
+            break;
+            case "left":
                 if (spriteNum == 1)
                     image = left1;
                 if (spriteNum == 2)
                     image = left2;
-            }
-            case "right" -> {
+            break;
+            case "right":
                 if (spriteNum == 1)
                     image = right1;
                 if (spriteNum == 2)
                     image = right2;
-            }
+            break;
         }
         g.drawImage(image, screenX, screenY, gp.tileSize, gp.tileSize, null);
     }
@@ -244,10 +251,10 @@ public class Player extends Entity {
 
         if (!collisionOn)
             switch (direction) {
-                case "up" -> worldY -= speed;
-                case "down" -> worldY += speed;
-                case "left" -> worldX -= speed;
-                case "right" -> worldX += speed;
+                case "up": worldY -= speed; break;
+                case "down": worldY += speed; break;
+                case "left": worldX -= speed; break;
+                case "right": worldX += speed; break;
 
             }
     }

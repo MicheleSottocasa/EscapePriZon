@@ -28,38 +28,38 @@ public class OBJ_Key extends SuperObject {
     public OBJ_Key(String type){
 
         switch (type) {
-            case "red" -> {
+            case "red":
                 name = "redKey";
                 try {
                     image = ImageIO.read(new File("resources/Object/key/redkey.png"));
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-            }
-            case "green" -> {
+            break;
+            case "green":
                 name = "GreenKey";
                 try {
                     image = ImageIO.read(new File("resources/Object/key/greenkey..png"));
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-            }
-            case "purple" -> {
+            break;
+            case "purple":
                 name = "PurpleKey";
                 try {
                     image = ImageIO.read(new File("resources/Object/key/purplekey.png"));
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-            }
-            case "white" -> {
+            break;
+            case "white":
                 name = "WhiteKey";
                 try {
                     image = ImageIO.read(new File("resources/Object/key/whitekey.png"));
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-            }
+            break;
         }
 
     }
